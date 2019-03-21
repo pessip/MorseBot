@@ -1,0 +1,16 @@
+{
+  "name": "morsebot",
+  "version": "1.0.0",
+  "description": "A discord bot for decoding morse code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Pessi Päivärinne (pessipaivarinne@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "morse": "^0.1.0",
+    "node-opus": "^0.3.1"
+  }
+}
