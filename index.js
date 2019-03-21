@@ -1,3 +1,8 @@
+// Copyright (c) 2019 Pessi Päivärinne
+// 
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
+
 const Discord = require('discord.js');
 const morse = require('morse');
 const config = require('./config.json');
