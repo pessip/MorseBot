@@ -57,7 +57,13 @@ client.on('message', msg => {
         if (!args.length) {
             return msg.channel.send('You didn\'t provide any morse code for me to decode');
         }
-        return msg.channel.send(morse.decode(args.join(' ')));
+        resp = morse.decode(msg.content);
+        if (!resp) {
+            return msg.channel.send('There was a syntax error in your message.');
+        }
+        else {
+            return msg.channel.send(resp)
+        }
     }
     //encode command
     else if (command === 'e') {
