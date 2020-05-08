@@ -9,8 +9,7 @@
   "author": "Pessi Päivärinne (pessipaivarinne@gmail.com)",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^11.4.2",
-    "morse": "^0.1.0",
-    "node-opus": "^0.3.1"
+    "discord.js": "^11.6.4",
+    "morse": "^0.1.0"
   }
 }
