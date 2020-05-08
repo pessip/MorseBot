@@ -10,6 +10,33 @@ const config = require('./config.json');
 const client = new Discord.Client();
 var prefix = config.prefix
 
+// Logging stuff
+process.on('beforeExit', code => {
+  // Can make asynchronous calls
+  setTimeout(() => {
+    console.log(`Process will exit with code: ${code}`)
+    process.exit(code)
+  }, 100)
+})
+
+process.on('exit', code => {
+  // Only synchronous calls
+  console.log(`Process exited with code: ${code}`)
+})
+
+process.on('beforeExit', code => {
+  // Can make asynchronous calls
+  setTimeout(() => {
+    console.log(`Process will exit with code: ${code}`)
+    process.exit(code)
+  }, 100)
+});
+
+process.on('exit', code => {
+  // Only synchronous calls
+  console.log(`Process exited with code: ${code}`)
+})
+
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
