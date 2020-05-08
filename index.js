@@ -3,6 +3,7 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
+require('dotenv').config()
 const Discord = require('discord.js');
 const morse = require('morse');
 const config = require('./config.json');
@@ -57,12 +58,14 @@ client.on('message', msg => {
         if (!args.length) {
             return msg.channel.send('You didn\'t provide any morse code for me to decode');
         }
-        resp = morse.decode(msg.content);
-        if (!resp) {
+        morseResp = morse.decode(msg.content);
+        console.log(morseResp);
+        console.log(morseResp.length);
+        if (morseResp === '  ') {
             return msg.channel.send('There was a syntax error in your message.');
         }
         else {
-            return msg.channel.send(resp)
+            return msg.channel.send(morseResp)
         }
     }
     //encode command
