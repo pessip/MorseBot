@@ -62,7 +62,7 @@ client.on('message', msg => {
         // console.log(morseResp);
         // console.log(morseResp.length);
         if (morseResp === '  ') {
-            return msg.channel.send('There was a syntax error in your message.');
+            return msg.channel.send('There was a syntax error in your message. Make sure your message consist only of morse code.');
         }
         else {
             return msg.channel.send(morseResp)
